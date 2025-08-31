@@ -1,4 +1,4 @@
-# SELUNet
+# EELUNet
 Improving Boundary Sensitivity in Medical Image Segmentation
 
 # Acknowledgments
