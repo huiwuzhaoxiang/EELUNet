@@ -109,7 +109,7 @@ class Grouped_multi_axis_Hadamard_Product_Attention(nn.Module):
         return x
 
 
-class EGEUNet(nn.Module):
+class EELUNet(nn.Module):
 
     def __init__(self, num_classes=1, input_channels=3, c_list=[8,16,24,32,48,64], bridge=True, gt_ds=True):
         super().__init__()
@@ -372,7 +372,7 @@ class EGEUNet(nn.Module):
 
 if __name__ == '__main__':
     tensor = torch.randn(1, 3, 256, 256)
-    model = EGEUNet(num_classes=1, input_channels=3, c_list=[8,16,24,32,48,64] , bridge=True , gt_ds=True)
+    model = EELUNet(num_classes=1, input_channels=3, c_list=[8,16,24,32,48,64] , bridge=True , gt_ds=True)
     gt_pre, edge, out = model(tensor)
 
     # 打印gt_pre中每个张量的形状
